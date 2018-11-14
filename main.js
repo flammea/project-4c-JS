@@ -3,11 +3,13 @@ document.body.addEventListener("click", event => {
     const y = event.clientY;
 
     if ((x % 2 == 0) && (y % 2 == 0)) {
-        console.log("parzyste")
+        console.log("even");
+        document.body.style.backgroundColor = "red";
     } else if (!(x % 2 == 0) && !(y % 2 == 0)) {
-        console.log("nieparzyste")
+        console.log("odd");
+        document.body.style.backgroundColor = "blue";
     } else {
-        console.log("inne")
+        console.log("other");
+        document.body.style.backgroundColor = "green";
     }
-    // document.body.style.backgroundColor = `rgb(${x}%, ${y}%, ${z}%)`;
 })
